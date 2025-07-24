@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ElevenLabs Chat</title>
+    <style>
+        body { margin: 0; overflow: hidden; height: 100vh; display: flex; justify-content: center; align-items: center; }
+        elevenlabs-convai { width: 100%; height: 100%; } /* Adjust styling as needed */
+    </style>
+</head>
+<body>
+    <elevenlabs-convai agent-id="YOUR_AGENT_ID"></elevenlabs-convai>
+    <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
+</body>
+</html>
