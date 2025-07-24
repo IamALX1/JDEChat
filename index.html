@@ -20,6 +20,12 @@
             width: 100% !important;
             height: 100% !important;
             display: block !important; /* Ensures it behaves like a block element */
+            /* Force widget to be static inside its parent container */
+            position: absolute !important; /* Position relative to the parent div */
+            top: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            bottom: 0 !important;
         }
     </style>
 </head>
@@ -36,9 +42,9 @@
         </h1>
 
         <!-- Container for the ElevenLabs widget -->
-        <!-- This div ensures the widget has a defined space and styling -->
-        <div class="flex-grow w-full max-w-lg bg-gray-50 rounded-2xl shadow-inner overflow-hidden
-                    flex items-center justify-center p-2">
+        <!-- Added 'relative' class to make it a positioning context for the absolute child -->
+        <!-- Removed 'items-center' and 'justify-center' as absolute positioning handles placement -->
+        <div class="relative flex-grow w-full max-w-lg bg-gray-50 rounded-2xl shadow-inner overflow-hidden p-2">
             <!-- The ElevenLabs Conversational AI widget -->
             <elevenlabs-convai agent-id="agent_8001k0yp6zv1ev4b6ykrkw0vfkqk"></elevenlabs-convai>
         </div>
